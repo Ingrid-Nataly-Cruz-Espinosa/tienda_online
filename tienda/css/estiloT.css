@@ -1,0 +1,12 @@
+.miestilolabel{
+  color: rgba(65, 6, 57, 0.692);
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-style: bold;
+  width: 100%;
+  text-align: center;
+}
+
+campodeshabilitado{
+  pointer-events: none;
+  background: #dddddd;
+}
