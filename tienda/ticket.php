@@ -17,7 +17,7 @@
         continue;
     }
     $db->exec('UPDATE productos SET existencia= existencia - '.$productoYCantidad[1].' WHERE id_producto="'.$productoYCantidad[0].'"');
-    $existencias = $db->query('SELECT  existencias= existencias - '.$productoYCantidad[1].'FROM productos WHERE id_producto="'.$productoYCantidad[0].'"');
+    $existencias = $db->query('SELECT  existencia= existencia - '.$productoYCantidad[1].'FROM productos WHERE id_producto="'.$productoYCantidad[0].'"');
     $db->exec("INSERT INTO tickets (cantidad_producto,producto,total_producto) VALUES ('$productoYCantidad[1]', '$productoYCantidad[0]', '$existencias');");
    
 		

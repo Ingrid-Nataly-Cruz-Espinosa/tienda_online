@@ -19,7 +19,10 @@ insert into productos (producto, precio, existencia) values
 create table tickets(
        idticket integer  not null primary key AUTOINCREMENT not null,
        fecha_hora TIMESTAMP DEFAULT CURRENT_TIMESTAMP not null,
-       cantidad_producto varchar (5) not null ,
+       cantidad_producto varchar (5) not null , 
        producto varchar (30) not null ,
        total_producto  integer not null
 );
+
+insert into tickets (cantidad_producto, producto, total_producto) values 
+('1','FABULOSO','299');
