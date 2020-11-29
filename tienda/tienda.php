@@ -1,3 +1,9 @@
+<?php
+    include 'condb.php';
+    $resultado = $db->query("SELECT * from productos");
+    if(isset($_GET['producto']))
+  
+?>
 <!DOCTYPE html>
 <html lang="es">
   <head>
@@ -17,14 +23,19 @@
       <form method="POST" action="ticket.php">
         <select name="producto" class="custom-select mb-3" id="producto">
           <option selected>Selecciona tu productos favorito</option>
-          <option value="25">Fabuloso</option>
-          <option value="9">Chetos FlamingHot</option>
-          <option value="15">Jabon Corporal</option>
-          <option value="5">TupsiPop</option>
-          <option value="3">Sopas</option>
-          <option value="19">Jabon Polvo</option>
-          <option value="9">Matequilla</option>
-          <option value="38">CocaCola</option>
+          <?php 
+                        
+                        while ($row = $resultado->fetchArray())
+                        {
+                            $existencia = $row["existencia"];
+                            if ($existencia>0)
+                            {
+                    ?>
+                                <option value="<?php echo $row['precio']?>"> <?php echo $row['producto']?></option>
+                    <?php
+                            }
+                        }
+                    ?>
         </select>  
         <label for="cant">CANTIDAD:</label>
         <input type="number" class="form-control" id="cantidad" placeholder="Ingresa la cantidad que deceas" name="cantidad">
