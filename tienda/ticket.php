@@ -12,7 +12,7 @@
 
     $productos = explode(";",$idProductos);
     foreach ($productos as $producto) {
-    $productoYCantidad = explode(":",$producto);
+    $productoYCantidad = explode(":", $carrito);
     if(!isset($productoYCantidad[0]) || !isset($productoYCantidad[1])){
         continue;
     }

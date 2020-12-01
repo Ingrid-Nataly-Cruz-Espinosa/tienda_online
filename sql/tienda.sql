@@ -24,5 +24,3 @@ create table tickets(
        total_producto  integer not null
 );
 
-insert into tickets (cantidad_producto, producto, total_producto) values 
-('1','FABULOSO','299');

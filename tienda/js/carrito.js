@@ -5,7 +5,7 @@ function insertar(){
   var carritoC=$("#texta").val(); 
   if(cantidad<10 & cantidad >0 &  precio >0) {
     
-    $("#texta").text("Cantidad : "+ cantidad + " El producto es: " + nombre +  " Precio:$" + precio + "\nEl total es de:$"+ parseFloat(cantidad)*parseFloat(precio)+"\n"+carritoC);
+    $("#texta").text(cantidad + nombre +  " Precio:$" + precio + "\nEl total es de:$"+ parseFloat(cantidad)*parseFloat(precio)+"\n"+carritoC);
     listo(parseFloat(cantidad)* parseFloat(precio));
   }
   if (cantidad <=0 & precio<=0 ){
